@@ -35,6 +35,14 @@ class CustomWizard::AdminWizardController < CustomWizard::AdminController
   end
 
   def save
+
+    puts '========================'
+    puts '========================'
+    puts '========================'
+    puts 'IT IS HERE'
+    puts '========================'
+    puts '========================'
+    puts '========================'
     template = CustomWizard::Template.new(save_wizard_params.to_h)
     wizard_id = template.save(create: params[:create])
 
