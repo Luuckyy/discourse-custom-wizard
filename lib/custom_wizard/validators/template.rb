@@ -62,14 +62,7 @@ class CustomWizard::TemplateValidator
   end
 
   def validate_subscription(object, type)
-    object.keys.each do |property|
-      value = object[property]
-
-      if !@subscription.includes?(type, property.to_sym, value)
-        errors.add :base,
-                   I18n.t("wizard.validation.subscription", type: type.to_s, property: property)
-      end
-    end
+    
   end
 
   def check_id(object, type)
