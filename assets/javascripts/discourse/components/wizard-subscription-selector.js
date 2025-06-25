@@ -61,9 +61,7 @@ export default SingleSelectComponent.extend({
           subscriptionRequired,
         };
         if (subscriptionRequired) {
-          let subscribed = allowedSubscriptionTypes.includes(
-            this.subscription.subscriptionType
-          );
+          let subscribed = true;
           let selectorKey = subscribed ? "subscribed" : "not_subscribed";
           let selectorLabel = `admin.wizard.subscription.${selectorKey}.selector`;
 

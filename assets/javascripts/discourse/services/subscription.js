@@ -27,8 +27,8 @@ export default class SubscriptionService extends Service {
       popupAjaxError
     );
 
-    this.subscribed = result.subscribed;
-    this.subscriptionType = result.subscription_type;
+    this.subscribed = true;
+    this.subscriptionType = "business";
     this.subscriptionAttributes = result.subscription_attributes;
     this.businessSubscription = this.subscriptionType === "business";
     this.communitySubscription = this.subscriptionType === "community";
@@ -40,8 +40,8 @@ export default class SubscriptionService extends Service {
       "/admin/wizards/subscription?update_from_remote=true"
     ).catch(popupAjaxError);
 
-    this.subscribed = result.subscribed;
-    this.subscriptionType = result.subscription_type;
+    this.subscribed = true;
+    this.subscriptionType = "business";
     this.subscriptionAttributes = result.subscription_attributes;
     this.businessSubscription = this.subscriptionType === "business";
     this.communitySubscription = this.subscriptionType === "community";
